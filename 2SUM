@@ -1,0 +1,36 @@
+PROBLEM : 2SUM
+Input: 
+nums = [3,4,5,6], target = 7
+
+Output: [0,1]
+
+BRUTE FORCE APPROACH :
+O(N2)
+  run 2 loops 
+  and check for each iteration if it is equal to target or not 
+  if(a[i]+ a[j]= tareget)
+  store i and j in vector .
+  return vector 
+
+
+OPTIMISED APPROACH :
+ // USING 2 PTR APPRAOCH 
+      int n= nums.size();
+      sort(nums.begin(), nums.end());
+      int s =0,e =n-1;  
+      vector<int> v;
+      while(s<e){
+        int sum = nums[s] + nums[e]; 
+        if(sum == target ){
+            v.push_back(s);
+            v.push_back(e);
+        }
+        else if(sum < target ){
+            s++;
+        }
+        else {
+            e--;
+        }
+      }
+      return v;
+    }
