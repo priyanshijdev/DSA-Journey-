@@ -1,0 +1,40 @@
+1169 Majority Element
+
+Input: nums = [2,2,1,1,1,2,2]
+Output: 2
+
+Brute Force Approach :
+ nested loop 
+
+for (int i = 0; i < n; i++) {
+        int cnt = 0;
+        for (int j = 0; j < n; j++) {
+            if (v[j] == v[i]) {
+                cnt++;
+            }
+        }
+        if (cnt > (n / 2))
+            return v[i];
+    }
+
+
+2nd Approach : Optimised one 
+Moore's Voting Algorithm .
+1 run the loop
+2  maintain one count
+3 
+if (count == 0) count =1 
+ele = a[i]
+  else if(ele == v[i])
+    cnt++;
+  else 
+    cnt--
+ int cnt1 = 0;
+    for (int i = 0; i < n; i++) {
+        if (v[i] == el) cnt1++;
+    }
+     if (cnt1 > (n / 2)) return el;
+    return -1;
+
+
+
