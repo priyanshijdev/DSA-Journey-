@@ -1,0 +1,20 @@
+121 >> True 
+Nitin >> yes 
+
+APPROACH : 
+ Reverse the number 
+then store that number in a var 
+comapre that var with same existing number 
+
+code :
+if(x<0){
+            return false;
+        }
+        long long reversed =0, temp =x;
+
+        while(temp!=0){
+            int digit = temp%10;
+            reversed= reversed*10+ digit;
+            temp/=10;
+        }
+        return(reversed==x);
