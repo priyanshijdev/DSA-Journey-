@@ -1,0 +1,37 @@
+1 2 3 4 5 k=2 
+ O/p: 4 5 1 2 3
+
+Brute force approach 
+Tc O(n) O(n)
+
+Code:
+  vector<int> v;
+  k=k%n;
+  vector<int> v;
+  for(int i=0;i<n;i++)
+    {  
+      v[(i+k)%n]=nums[i];
+    }
+  
+  for(int i=0;i<n;i++)
+    {  
+      nums[i] = v[i];
+    }
+
+ OPTIMISED APPROACH :
+
+    void rotate(vector<int>& nums, int k) {
+        k %= nums.size();
+
+        reverse(nums, 0, nums.size() - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, nums.size() - 1);
+    }
+
+    void reverse(vector<int>& nums, int left, int right) {
+        while (left < right) {
+            swap(nums[left], nums[right]);
+            left++;
+            right--;
+        }
+    }   
