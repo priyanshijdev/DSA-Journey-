@@ -1,0 +1,20 @@
+ex : 0 1 0 3 4 2 0>>> 1 3 4 2 0 0 
+code :
+
+ Brute Force Approach :
+
+1 take extra array or vector :
+2 and maintain one count >>> Increment count if(count!=0)
+3  and count = n- count ;
+
+
+OPTIMISED APPROACH :
+TC :o(N)
+
+  int left=0;
+  for(int right=0; right< nums.size(); right++){
+              if(nums[right] !=0){
+                  swap(nums[right], nums[left]);
+                  left++;
+              }
+          }
