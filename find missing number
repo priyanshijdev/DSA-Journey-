@@ -1,0 +1,76 @@
+Find Missing Number in array :
+
+ N = 5, array[] = {1,2,4,5}
+  O/p: 3 
+
+    using Brute Force Approach :O(n2)
+    Code :
+     for (int i = 1; i <= N; i++) {
+            int flag = 0;
+            for (int j = 0; j < N - 1; j++) {
+                if (nums[j] == i) {
+                    flag = 1;
+                    break;
+                }
+            }
+        if (flag == 0) return i;
+    }
+    return -1;
+
+
+  --------------------------------------------------------------
+  Better Approach :O(n) space :O(n)
+  Using hashing 
+
+  Algorithm:
+1 maintain hash 
+2 mark hash if present in arary 
+3 just return i if(has[i]==0)
+
+Code :
+int n= nums.size();
+        int hash[n + 1] = {0};
+        for(int i=0; i<n-1;i++){
+            hash[nums[i]]++;
+        }
+        for(int i=1; i<=n; i++){
+            if(hash[i]==0 ){
+                return i;
+            }
+        }
+        return -1;
+
+
+---------------------------------------------------------------
+Optimal Approach : 
+1 using sum 
+2 using xor operator :
+
+ int n= nums.size();
+        int sum1=(n*(n+1)/2);
+        int sum2=0;
+        for(int i=0; i<n; i++){
+            sum2+=nums[i];
+        }
+        int result= sum1-sum2;
+        return result;
+
+-------------------------
+using xor :
+int xor1 = 0, xor2 = 0;
+
+    for (int i = 0; i < N - 1; i++) {
+        xor2 = xor2 ^ a[i]; // XOR of array elements
+        xor1 = xor1 ^ (i + 1); //XOR up to [1...N-1]
+    }
+    xor1 = xor1 ^ N; //XOR up to [1...N]
+
+    return (xor1 ^ xor2); /
+
+
+
+
+
+
+  
+  
