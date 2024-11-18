@@ -1,0 +1,12 @@
+Ex: 1 2 2 1 2 7 O/p: 7
+brute :
+TC: O(n2)
+for(int i= 0 to n)
+ ele = ar[i];
+for(j=0 to n)
+if(ele == arr[j])
+count++;
+}
+if(count =1)
+return ele;
+-----------------------------------------------
