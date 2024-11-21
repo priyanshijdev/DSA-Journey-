@@ -1,0 +1,15 @@
+Search Element in a Rotated Sorted Array
+
+
+ex :Input: nums = [4,5,6,7,0,1,2], target = 0
+Output: 4
+
+Brute Force Approach :
+using Linear Search O(n)
+ -> run the loop till n 
+-> traverse each ele and search it 
+-> return it 
+but that's not a optimised solution .
+
+SO , Optimised Solution :
+Using binary Search :
