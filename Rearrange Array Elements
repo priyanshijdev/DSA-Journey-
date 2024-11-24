@@ -1,0 +1,25 @@
+2149. Rearrange Array Elements by Sign
+
+You should return the array of nums such that the the array follows the given conditions:
+
+Every consecutive pair of integers have opposite signs.
+For all integers with the same sign, the order in which they were present in nums is preserved.
+The rearranged array begins with a positive integer.
+
+Input: nums = [3,1,-2,-5,2,-4]
+Output: [3,-2,1,-5,2,-4]
+Explanation:
+The positive integers in nums are [3,1,2]. The negative integers are [-2,-5,-4].
+The only possible way to rearrange them such that they satisfy all conditions is [3,-2,1,-5,2,-4].
+Other ways such as [1,-2,2,-5,3,-4], [3,1,2,-2,-5,-4], [-2,3,-5,1,-4,2] are incorrect because they do not satisfy one or more conditios
+
+Code :
+1 take one vector of size n and pos=0, neg=0
+2 iterate loop from 0 to n 
+3 check if(a[i]>0 )                
+  result[posIndex] = nums[i];
+ increment postive counter by 2
+4 else neg+=2; 
+result[neg] = nums[i] 
+
+4 return resl
