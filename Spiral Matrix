@@ -1,0 +1,37 @@
+1 2 3 
+4 5 6 
+7 8 9   >>>>>>> 1 2 3 6 9 8 7 45
+
+
+while (top <= bottom && left <= right) {
+      
+    // For moving left to right
+    for (int i = left; i <= right; i++)
+      ans.push_back(mat[top][i]);
+
+    top++;
+
+    // For moving top to bottom.
+    for (int i = top; i <= bottom; i++)
+      ans.push_back(mat[i][right]);
+
+    right--;
+    
+    // For moving right to left.
+    if (top <= bottom) {
+      for (int i = right; i >= left; i--)
+       ans.push_back(mat[bottom][i]);
+
+      bottom--;
+    }
+
+    // For moving bottom to top.
+    if (left <= right) {
+      for (int i = bottom; i >= top; i--)
+        ans.push_back(mat[i][left]);
+
+      left++;
+    }
+  }
+  return ans;
+}
