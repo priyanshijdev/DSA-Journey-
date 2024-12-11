@@ -1,0 +1,10 @@
+ Input: s = "the sky is blue"
+Output: "blue is sky the"
+
+
+Brute force approach : TC:O(n) and space O(n)
+use stack until if(s[i]!=' ')
+  then push the elements 
+else i++
+
+Or use extra string and vector and reverse it 
