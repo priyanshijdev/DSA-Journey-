@@ -1,0 +1,18 @@
+LC 2461 : Sliding window Problem
+
+for (int i = 0; i < n; ++i) {
+            std::unordered_set<int> set;
+            long long sum = 0;
+            for (int j = i; j < i + k && j < n; ++j) {
+                if (set.find(nums[j]) != set.end()) {
+                    break;
+                }
+                set.insert(nums[j]);
+                sum += nums[j];
+            }
+            if (set.size() == k) {
+                max = std::max(sum, max);
+            }
+        }
+
+        return max;
