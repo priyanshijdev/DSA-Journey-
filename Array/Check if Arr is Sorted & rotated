@@ -1,0 +1,16 @@
+Just check last ele 
+then compapre with iteration.
+
+ex: 3 4 5  2 1 
+>> at i=3 (5>2) count=1 
+
+int count=0;
+       int n= nums.size();
+       if(nums[0] <nums[n-1])
+       count++;
+       for(int i=1;i<n;i++){
+            if(nums[i-1] > nums[i]){
+                count++;
+            }
+       }
+       return count<=1;
