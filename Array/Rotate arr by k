@@ -1,0 +1,10 @@
+
+Optimised :O(n), O(1)
+
+    void rotate(vector<int>& nums, int k) {
+        // 1 2 3 4 5 6 >> 
+        k= k% nums.size();
+        reverse(nums.begin(), nums.end());
+        reverse(nums.begin(), nums.begin()+k);
+        reverse(nums.begin()+k, nums.end());
+    }
