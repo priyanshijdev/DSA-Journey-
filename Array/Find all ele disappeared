@@ -1,0 +1,18 @@
+leetcode: 448
+O(n)
+        vector<int>freq(n+1,0); // freq vec
+        vector<int> res{}; // result vec
+        // compute freq 
+        for(auto x: nums){
+            freq[x]++;
+        }
+        // compute missing elements 
+        for(int i=1;i<=n;i++){
+            if(!freq[i])
+            res.push_back(i);
+        }
+        return res;
+
+-----------------------------------------------------------------------------------------------
+Optimised :
+O(n)
