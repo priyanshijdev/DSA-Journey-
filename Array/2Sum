@@ -1,0 +1,17 @@
+
+// 2 7 11 15 >> tar= 9 
+        // O/p: 0,1 
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int sum, n = nums.size();
+        // vector<int> vec
+        for(int i=0;i<n;i++){
+            for(int j=i+1; j<n;j++){
+                if(nums[i] + nums[j] == target){
+                    return {i,j};
+                }
+            }
+        }
+        return {};
+        }
+        ----------------------------------------------------------
+        Optimised : Use Hashing 
