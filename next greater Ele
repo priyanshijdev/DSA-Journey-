@@ -1,0 +1,16 @@
+int n1= nums1.size(), n2= nums2.size()-1;
+        vector<int>ans(n1);
+
+        for(int i=0;i<n1;i++){
+            int pos=-1, j=n2;
+            while(j>=0 && nums1[i] != nums2[j]){
+                if(nums2[j] > nums1[i]){
+                    pos = nums2[j];
+                }
+                j--;
+            }
+            ans[i]= pos;
+        }
+        return ans;
+------------------------------------------------------------
+Optimsed :
