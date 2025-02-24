@@ -1,0 +1,28 @@
+count 1's
+n=11 O/p: 3
+
+                                                      First Iteration:
+n - 1 = 10 (binary: 1010)
+n = n & (n - 1) → 1011 & 1010 = 1010
+count++ → count = 1
+
+                                                  Second Iteration:
+n - 1 = 9 (binary: 1001)
+n = n & (n - 1) → 1010 & 1001 = 1000
+count++ → count = 2
+
+                                                    Third Iteration:
+n - 1 = 7 (binary: 0111)
+n = n & (n - 1) → 1000 & 0111 = 0000
+count++ → count = 3
+
+Since n becomes 0, the loop terminates.
+
+  int count =0;
+
+        while(n){
+            n= n&(n-1);
+            count++;
+        }
+        return count;
+    
