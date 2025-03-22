@@ -1,0 +1,14 @@
+Input: head = [1,2,3,4,5]
+Output:[5,4,3,2,1]
+
+code:
+Optimised apporoach : just reverse the pointer reference
+
+ ListNode *nextNode, *prevNode = NULL;
+        while (head) {
+            nextNode = head->next;
+            head->next = prevNode;
+            prevNode = head;
+            head = nextNode;
+        }
+        return prevNode;
