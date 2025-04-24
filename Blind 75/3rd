@@ -1,0 +1,7 @@
+longest repative char:
+Input: A string s
+Output: Length of the longest substring that contains only one unique character, repeated consecutively.
+Example:
+Input: "aaabbccccddee"
+Output: 4 (because "cccc" is the longest)
+
