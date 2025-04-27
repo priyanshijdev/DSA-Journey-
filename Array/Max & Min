@@ -1,0 +1,19 @@
+Maximum and minimum of an array using minimum number of comparisons
+
+Input: arr[] = {3, 5, 4, 1, 9}
+Output: 
+Minimum element is: 1 , Maximum element is: 9
+
+    int minVal = INT_MAX;  // Initialize min as the largest possible integer
+    int maxVal = INT_MIN;  // Initialize max as the smallest possible integer
+
+    // Loop through the array
+    for (int i = 0; i < n; i++) {
+        if (arr[i] < minVal) {
+            minVal = arr[i];  // Update min if current element is smaller
+        }
+        if (arr[i] > maxVal) {
+            maxVal = arr[i];  // Update max if current element is larger
+        }
+    }
+
