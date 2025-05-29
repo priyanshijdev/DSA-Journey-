@@ -1,0 +1,4 @@
+ sort(arr.begin(), arr.end())  ;
+        int n = arr.size()  ;
+
+    return arr[k - 1];
