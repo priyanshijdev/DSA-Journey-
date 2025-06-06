@@ -1,4 +1,6 @@
 LC:169
+ 1st brute-> sort() then return a[n/2];
+
         // brute just iterate
         int n= nums.size();
         map<int, int> mpp;
@@ -16,4 +18,18 @@ LC:169
 Optimal approach :
 Moore voting Algo:
 
-
+    int majorityElement(vector<int>& nums) {
+        int count=0, element=0;
+        for(int x: nums){
+            if(count == 0){
+                element = x;
+            }
+            if(x == element){
+                count++;
+            }
+            else {
+                count--;
+            }
+        }
+        return element;
+    }
