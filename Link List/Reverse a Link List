@@ -2,6 +2,23 @@ Input: head = [1,2,3,4,5]
 Output:[5,4,3,2,1]
 
 code:
+ Node* temp = head;  
+    stack<int> st;     
+    while (temp != nullptr) {
+
+        st.push(temp->data); 
+        temp = temp->next;    
+    }
+    temp = head; 
+    // Step 2: Pop values from the stack
+    while (temp != nullptr) {
+        temp->data = st.top();  
+               st.pop();              
+        temp = temp->next;     
+    }
+    return head;  
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
 Optimised apporoach : just reverse the pointer reference
 
  ListNode *nextNode, *prevNode = NULL;
