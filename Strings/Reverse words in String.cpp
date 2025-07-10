@@ -1,5 +1,5 @@
  Input: s = "the sky is blue"
-Output: "blue is sky the"
+Output: "blue is sky the
 
 
 Brute force approach : TC:O(n) and space O(n)
@@ -64,3 +64,22 @@ Optimised approach:
     
     return ans;  
     }
+
+
+--------------------------------------------------------------------------------
+
+  stringstream ss(s);  // objects ->> hello world 
+        string word, res =  "";
+        vector<string> vec;
+ 
+        while(ss >> word){
+            vec.push_back(word);
+        }
+
+        for(int i =vec.size()-1; i>=0;i-- ){
+            res += vec[i];
+            if(i!=0){
+                res+=" ";
+            }
+        }
+        return res;
