@@ -18,3 +18,17 @@ Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,
         }
         return maxWater;
 
+-----------------------------------------------------------------------------
+
+     int maxWater = INT_MIN;
+        int n = height.size() , s=0, e=n-1;
+        while(s<e){
+            int water= (e-s)*min(height[s] , height[e]);
+            maxWater= max(water, maxWater);
+            if(height[s] < height[e]){
+                s++;
+            }
+            else { e--;}
+        }
+        return maxWater;
+
