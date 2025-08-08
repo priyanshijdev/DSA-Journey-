@@ -34,3 +34,20 @@ Output: [1,3,4,1,2,6]
     return head;
     }
 };
+
+--------------------------------------------------------------------------
+
+  if(!head || !head->next) return nullptr;
+
+     ListNode* prev= nullptr;
+     ListNode* slow= head , *fast= head;
+    //  ListNode* fast = head;
+
+    while(fast && fast-> next){
+        prev = slow;
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    if(prev) prev->next= slow->next;
+    delete slow;
+    return head;
