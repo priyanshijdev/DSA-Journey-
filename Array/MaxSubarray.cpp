@@ -1,7 +1,5 @@
-o(n2)
+o(n3)
 int maxi= INT_MIN;
-        int n= nums.size();
-
         for(int i=0;i<n; i++){
             for(int j=i; j<n; j++){
                int sum=0;
@@ -40,12 +38,10 @@ int left = 0, right = 0; // 2 pointers
             sum -= a[left];
             left++;
         }
-
         // if sum = k, update the maxLen i.e. answer:
         if (sum == k) {
             maxLen = max(maxLen, right - left + 1);
         }
-
         // Move forward thw right pointer:
         right++;
         if (right < n) sum += a[right];
