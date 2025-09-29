@@ -1,6 +1,9 @@
 LC: 33
 Input: nums = [4,5,6,7,0,1,2], target = 0
 Output: 4
+
+  // Brute force approach:
+  Linear Search -> traverse each ele once.
   // Binary Search
     int search(vector<int>& nums, int target) {
         int left = 0;
